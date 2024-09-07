@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Book Your Homeopathy Appointment</title>
+        <link rel="icon" href="img/favicon.png">
+
+        <link
+            href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"
+            rel="stylesheet">
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/nice-select.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/icofont.css">
+        <link rel="stylesheet" href="css/slicknav.min.css">
+        <link rel="stylesheet" href="css/owl-carousel.css">
+        <link rel="stylesheet" href="css/datepicker.css">
+        <link rel="stylesheet" href="css/animate.min.css">
+        <link rel="stylesheet" href="css/magnific-popup.css">
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css/responsive.css">
+        <style>
+            /* Custom styles */
+            body {
+                font-family: 'Arial', sans-serif;
+            }
+
+            .appointment-page {
+                padding: 60px 0;
+                background: #e8f4f8;
+            }
+
+            .appointment-page .section-title {
+                text-align: center;
+                margin-bottom: 40px;
+            }
+
+            .appointment-page .section-title h2 {
+                font-size: 2.8rem;
+                color: #333;
+                margin-bottom: 15px;
+                animation: fadeInUp 1s ease-out;
+            }
+
+            .appointment-page .section-title p {
+                font-size: 1.2rem;
+                color: #666;
+                animation: fadeInUp 1.2s ease-out;
+            }
+
+            .appointment-page .form-group input,
+            .appointment-page .form-group textarea,
+            .appointment-page .form-group select {
+                border-radius: 8px;
+                border: 1px solid #ddd;
+                padding: 15px;
+                margin-bottom: 20px;
+                width: 100%;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                transition: border-color 0.3s ease;
+                animation: fadeInUp 1s ease-out;
+            }
+
+            .appointment-page .form-group input:focus,
+            .appointment-page .form-group textarea:focus,
+            .appointment-page .form-group select:focus {
+                border-color: #007bff;
+                outline: none;
+            }
+
+            .appointment-page .btn {
+                background-color: #28a745;
+                color: #fff;
+                border: none;
+                padding: 12px 25px;
+                border-radius: 8px;
+                cursor: pointer;
+                font-size: 1.1rem;
+                transition: background-color 0.3s ease;
+            }
+
+            .appointment-page .btn:hover {
+                background-color: #218838;
+            }
+
+            .appointment-page .success-message {
+                display: none;
+                text-align: center;
+                font-size: 1.2rem;
+                color: #28a745;
+                margin-top: 20px;
+                animation: fadeInUp 1s ease-out;
+            }
+
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            .appointment-page .form-group {
+                position: relative;
+            }
+
+            .appointment-page .form-group label {
+                position: absolute;
+                top: 0;
+                left: 15px;
+                background: #e8f4f8;
+                padding: 0 5px;
+                color: #666;
+                font-size: 0.9rem;
+                transition: all 0.3s ease;
+                transform: translateY(-50%);
+                pointer-events: none;
+            }
+
+            .appointment-page .form-group input:focus+label,
+            .appointment-page .form-group textarea:focus+label {
+                top: -12px;
+                left: 10px;
+                color: #007bff;
+                font-size: 0.8rem;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- Header (Reused from Home Page) -->
+        <header>
+            <!-- Include your header here -->
+        </header>
+
+        <!-- Appointment Page Content -->
+        <section class="appointment-page">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Book Your Homeopathy Appointment</h2>
+                    <p>Schedule a consultation with our expert homeopaths. Fill out the form below to book your
+                        appointment.</p>
+                </div>
+                <div class="row">
+                    <div class="col-lg-8 col-md-12 mx-auto">
+                        <form id="appointmentForm" class="form" action="#">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <div class="form-group">
+                                        <input name="name" type="text" placeholder=" " required>
+                                        <label for="name">Name</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <div class="form-group">
+                                        <input name="email" type="email" placeholder=" " required>
+                                        <label for="email">Email</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <div class="form-group">
+                                        <input name="phone" type="text" placeholder=" " required>
+                                        <label for="phone">Phone</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <div class="form-group">
+                                        <select name="department" required>
+                                            <option value="" disabled selected>Department</option>
+                                            <option value="1">General Homeopathy</option>
+                                            <option value="2">Chronic Illnesses</option>
+                                            <option value="3">Pediatric Care</option>
+                                            <option value="4">Women’s Health</option>
+                                        </select>
+                                        <label for="department">Department</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <div class="form-group">
+                                        <input type="text" placeholder=" " id="datepicker" required>
+                                        <label for="datepicker">Preferred Date</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-12">
+                                    <div class="form-group">
+                                        <textarea name="message" placeholder=" " required></textarea>
+                                        <label for="message">Message</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-12 text-center">
+                                    <button type="submit" class="btn">Book Appointment</button>
+                                    <p class="mt-3">We will confirm your appointment via email or phone call.</p>
+                                    <p id="successMessage" class="success-message">
+                                        <i class="fa fa-check-circle"></i> Your appointment has been successfully
+                                        booked!
+                                    </p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer (Reused from Home Page) -->
+        <footer id="footer" class="footer">
+            <!-- Include your footer here -->
+        </footer>
+
+        <script src="js/jquery.min.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <script src="js/nice-select.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/main.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('#appointmentForm').on('submit', function (e) {
+                    e.preventDefault();
+                    $('#successMessage').fadeIn();
+                    $('#appointmentForm')[0].reset();
+                    setTimeout(function () {
+                        $('#successMessage').fadeOut();
+                    }, 5000);
+                });
+            });
+        </script>
+    </body>
+
+</html>
